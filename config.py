@@ -8,11 +8,11 @@ user_agent = (
 )
 
 # 微博账号和密码
-USER_NAME = "xxx"
-PASSWD = "xxx"
+USER_NAME = "2312118379@qq.com"
+PASSWD = "bykt56223"
 
 # 发送微博的时间间隔
-TIME_SLOG =  10 * 60
+TIME_SLOG =  5
 
 
 # 上传图片

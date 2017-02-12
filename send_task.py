@@ -1,9 +1,10 @@
+# -*- coding: utf-8 -*-
 from threading import Thread, Event
 
 import spider_factory
 
 from config import TIME_SLOG
-from weibo.weibo_sender import WeiboSender
+from weibo_sender import WeiboSender
 from logger import logger
 
 class SendTask(Thread):
@@ -21,8 +22,13 @@ class SendTask(Thread):
 
       def stop(self):
             self.stopped.set()
-            
       def sendWeibo(self):
             spider = spider_factory.nextSpider()
             weibo = spider.get_weibo_message()
+            '''
+            print "##########################"
+            print weibo
+            print '***************************'
+            '''
+            weibo.text=weibo.text
             self.sender.send_weibo(weibo)
